@@ -23,7 +23,7 @@ export default function PageContainer({ sidebarItems, tabTitle, title, children 
   }
 
   const container = (
-    <Container sx={{ my: 5, maxWidth: '1600px !important' }}>
+    <Container sx={{ py: 4, px: 4, maxWidth: '1600px !important' }}>
       {title && (
         <Typography variant="h3" color="primary.dark" sx={{ fontWeight: 600, mb: 4 }}>
           {title}

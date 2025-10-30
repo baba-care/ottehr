@@ -116,21 +116,21 @@ export default function Navbar(): ReactElement | null {
       position="sticky"
       color="transparent"
       sx={{
-        boxShadow: 'none',
+        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.05)',
         borderBottom: `1px solid ${otherColors.lightDivider}`,
         backgroundColor: theme.palette.background.paper,
         top: adjustTopForBannerHeight(0),
       }}
     >
       <Container maxWidth="xl">
-        <Toolbar disableGutters variant="dense">
+        <Toolbar disableGutters variant="dense" sx={{ py: 1.5 }}>
           <Link to="/">
             <img
               src={logo}
               alt={`${PROJECT_NAME} logo`}
               style={{
-                marginRight: 20,
-                marginTop: 10,
+                marginRight: 24,
+                marginTop: 8,
                 width: 158,
               }}
             />
@@ -159,9 +159,15 @@ export default function Navbar(): ReactElement | null {
                     component={Link}
                     to={navbarItems[navbarItem]!.urls?.[0]}
                     sx={{
-                      fontSize: 16,
-                      fontWeight: 500,
+                      fontSize: 15,
+                      fontWeight: 600,
                       textTransform: 'capitalize',
+                      borderRadius: '8px',
+                      mx: 0.5,
+                      '&.Mui-selected': {
+                        fontWeight: 700,
+                        color: theme.palette.primary.main,
+                      },
                     }}
                   />
                 ))}

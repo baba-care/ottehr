@@ -810,10 +810,10 @@ npx playwright install chromium
 
 ```bash
 # Check for processes using required ports
-lsof -ti:3000,3002,4002
+lsof -ti:3001,3002,4002
 
 # Kill conflicting processes
-lsof -ti:3000,3002,4002 | xargs kill -9
+lsof -ti:3001,3002,4002 | xargs kill -9
 
 # Clean and restart
 rm -rf packages/zambdas/.env

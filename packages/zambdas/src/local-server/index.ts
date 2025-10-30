@@ -30,7 +30,7 @@ Object.entries(ottehrSpec.zambdas).forEach(([_key, spec]) => {
   console.log(`Registered POST: ${path}`);
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log(`Zambda local server is running on port 3000`);
 });
 

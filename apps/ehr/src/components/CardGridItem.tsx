@@ -29,7 +29,14 @@ export default function CardGridItem({
 }: CardGridItemProps): ReactElement {
   return (
     <Grid key={card.type} item xs={12} sm={6} boxSizing="border-box">
-      <Box border={`1px solid ${otherColors.dottedLine}`} height="170px" width="100%" my={1} borderRadius={2}>
+      <Box
+        border={`1px solid ${otherColors.dottedLine}`}
+        height="170px"
+        width="100%"
+        my={1}
+        borderRadius="12px"
+        boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
+      >
         <Box
           onClick={() => {
             setZoomedIdx(index + offset);

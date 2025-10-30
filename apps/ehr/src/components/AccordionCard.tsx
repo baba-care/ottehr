@@ -25,7 +25,8 @@ export const AccordionCard: FC<AccordionCardProps> = (props) => {
         gap: '1px',
         backgroundColor: otherColors.solidLine,
         border: withBorder ? `1px solid ${otherColors.solidLine}` : 'none',
-        borderRadius: 1,
+        borderRadius: '12px',
+        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       }}
       data-testid={dataTestId}
     >
@@ -36,10 +37,10 @@ export const AccordionCard: FC<AccordionCardProps> = (props) => {
             alignItems: 'center',
             gap: 1,
             backgroundColor: otherColors.apptHover,
-            py: 0.5,
-            px: 2,
-            borderTopLeftRadius: 4,
-            borderTopRightRadius: 4,
+            py: 1,
+            px: 3,
+            borderTopLeftRadius: '12px',
+            borderTopRightRadius: '12px',
           }}
         >
           <Box
@@ -64,7 +65,7 @@ export const AccordionCard: FC<AccordionCardProps> = (props) => {
               </IconButton>
             )}
             {typeof label === 'string' ? (
-              <Typography variant="h6" color={theme.palette.primary.dark}>
+              <Typography variant="h6" color={theme.palette.primary.dark} fontWeight={700}>
                 {label}
               </Typography>
             ) : (
@@ -79,9 +80,9 @@ export const AccordionCard: FC<AccordionCardProps> = (props) => {
         <Box
           sx={{
             backgroundColor: theme.palette.background.paper,
-            borderBottomLeftRadius: 4,
-            borderBottomRightRadius: 4,
-            borderRadius: label ? undefined : 1,
+            borderBottomLeftRadius: '12px',
+            borderBottomRightRadius: '12px',
+            borderRadius: label ? undefined : '12px',
           }}
         >
           {children}

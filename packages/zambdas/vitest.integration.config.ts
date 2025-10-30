@@ -9,7 +9,7 @@ export default defineConfig({
     hookTimeout: 30000, // 30 seconds
     include: ['*/integration/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
     provide: {
-      EXECUTE_ZAMBDA_URL: 'http://localhost:3000/local',
+      EXECUTE_ZAMBDA_URL: 'http://localhost:3001/local',
     },
   },
 });

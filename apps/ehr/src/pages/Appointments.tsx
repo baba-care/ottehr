@@ -32,7 +32,6 @@ import GroupSelect from '../components/GroupSelect';
 import LocationSelect from '../components/LocationSelect';
 import ProvidersSelect from '../components/ProvidersSelect';
 import { dataTestIds } from '../constants/data-test-ids';
-import { adjustTopForBannerHeight } from '../helpers/misc.helper';
 import { useApiClients } from '../hooks/useAppClients';
 import PageContainer from '../layout/PageContainer';
 import { VisitType, visitTypeToInPersonLabel } from '../types/types';
@@ -413,14 +412,14 @@ function AppointmentsBody(props: AppointmentsBodyProps): ReactElement {
           <Box
             sx={{
               position: { xs: 'static', sm: 'sticky' },
-              top: adjustTopForBannerHeight(80),
+              top: 20,
               zIndex: 1,
-              backgroundColor: '#F9FAFB',
+              backgroundColor: '#fafafa',
               alignItems: 'center',
               width: '100%',
             }}
           >
-            <Paper sx={{ padding: 2 }}>
+            <Paper sx={{ padding: 3, borderRadius: '12px', border: '1px solid #e5e7eb' }}>
               <Grid container sx={{ justifyContent: 'center' }} spacing={2}>
                 <Grid
                   item
@@ -520,12 +519,16 @@ function AppointmentsBody(props: AppointmentsBodyProps): ReactElement {
                         <Button
                           data-testid={dataTestIds.dashboard.addPatientButton}
                           sx={{
-                            borderRadius: 100,
+                            borderRadius: '10px',
                             textTransform: 'none',
-                            fontWeight: 600,
+                            fontWeight: 700,
                             marginBottom: '20px',
+                            backgroundColor: '#1a1a1a',
+                            color: '#ffffff',
+                            '&:hover': {
+                              backgroundColor: '#333333',
+                            },
                           }}
-                          color="primary"
                           variant="contained"
                         >
                           <AddIcon />
@@ -542,12 +545,16 @@ function AppointmentsBody(props: AppointmentsBodyProps): ReactElement {
               <Link to="/visits/add">
                 <Button
                   sx={{
-                    borderRadius: 100,
+                    borderRadius: '10px',
                     textTransform: 'none',
-                    fontWeight: 600,
+                    fontWeight: 700,
                     width: '100%',
+                    backgroundColor: '#1a1a1a',
+                    color: '#ffffff',
+                    '&:hover': {
+                      backgroundColor: '#333333',
+                    },
                   }}
-                  color="primary"
                   variant="contained"
                 >
                   <AddIcon />

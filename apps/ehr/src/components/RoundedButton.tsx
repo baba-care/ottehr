@@ -22,7 +22,7 @@ export const RoundedButton = styled(
 )(() => ({
   whiteSpace: 'nowrap',
   minWidth: 'auto',
-  borderRadius: 100,
+  borderRadius: 10,
   width: 'fit-content',
   root: {
     '&.Mui-disabled': {
@@ -30,6 +30,6 @@ export const RoundedButton = styled(
     },
   },
   textTransform: 'none',
-  fontWeight: 500,
+  fontWeight: 600,
   fontSize: 14,
 }));

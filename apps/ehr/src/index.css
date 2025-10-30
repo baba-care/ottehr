@@ -34,3 +34,9 @@
     url(./fonts/Rubik-Medium.woff2) format('woff2');
   font-weight: 500;
 }
+
+/* Clean, modern styling consistent with advocate dashboard */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

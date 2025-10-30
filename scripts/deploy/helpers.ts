@@ -52,13 +52,13 @@ export async function updateEnvFiles(environment: string, patientPortalUrl: stri
   let patientPortalEnvFile = fs.readFileSync(`${__dirname}/../../apps/intake/env/.env.${environment}`, 'utf8');
   patientPortalEnvFile = patientPortalEnvFile.replace(/paperwork\//g, '');
   patientPortalEnvFile = patientPortalEnvFile.replace(
-    'http://localhost:3000/local',
+    'http://localhost:3001/local',
     'https://project-api.zapehr.com/v1'
   );
   patientPortalEnvFile = patientPortalEnvFile.replace('VITE_APP_IS_LOCAL=true', 'VITE_APP_IS_LOCAL=false');
 
   let ehrEnvFile = fs.readFileSync(`${__dirname}/../../apps/ehr/env/.env.${environment}`, 'utf8');
-  ehrEnvFile = ehrEnvFile.replace('http://localhost:3000/local', 'https://project-api.zapehr.com/v1');
+  ehrEnvFile = ehrEnvFile.replace('http://localhost:3001/local', 'https://project-api.zapehr.com/v1');
   ehrEnvFile = ehrEnvFile.replace('http://localhost:4000/local', 'https://project-api.zapehr.com/v1');
   ehrEnvFile = ehrEnvFile.replace('VITE_APP_IS_LOCAL=true', 'VITE_APP_IS_LOCAL=false');
   ehrEnvFile = ehrEnvFile.replace(
